@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Question for You...</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- 1. HIDDEN AUDIO PLAYER -->
+    <audio id="voice-note" src="audio.mp3" loop></audio>
+
+    <!-- 2. OVERLAY (Forces her to click so audio can play) -->
+    <div id="overlay">
+        <div class="overlay-content">
+            <h1>Hi Beautiful ❤️</h1>
+            <p>Tap anywhere to begin...</p>
+        </div>
+    </div>
+
+    <!-- 3. MAIN CONTENT -->
+    <div class="container">
+        <img id="main-image" src="https://media.giphy.com/media/Z3B6Z3B6Z3B6/l4pTfx2qLSznfnFaf/giphy.gif" alt="Cute Bear">
+        
+        <h1 id="question">Will you be my Valentine? 🌹</h1>
+        
+        <!-- Optional: Small music control if she wants to pause -->
+        <div class="music-control" onclick="toggleAudio()">
+            <span id="music-icon">🔊</span>
+        </div>
+
+        <div class="buttons">
+            <button id="yes-btn" onclick="acceptLove()">YES!</button>
+            <button id="no-btn" onmouseover="moveButton()">No</button>
+        </div>
+
+        <div id="loading" style="display:none; margin-top: 20px;">
+            <p>Sending our memories to your inbox... ❤️</p>
+        </div>
+    </div>
+
+    <div class="hearts"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
