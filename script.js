@@ -7,6 +7,13 @@
 // 2. Handle Overlay & Audio
 const overlay = document.getElementById("overlay");
 const audio = document.getElementById("voice-note");
+const video = document.getElementById("main-video");
+
+if (video) {
+  video.play().catch((error) => {
+    console.log("Video play failed: ", error);
+  });
+}
 
 // Only add event listener if elements exist (prevents errors)
 if (overlay && audio) {
@@ -88,7 +95,7 @@ function acceptLove() {
 
   // Send Email
   var templateParams = {
-    to_email: "wfjoellarmar@gmail.com", // Put her email here
+    to_email: "obiblessingchinonye@gmail.com", // Put her email here
     love_message: myLoveLetter, // This sends the letter above
   };
 
